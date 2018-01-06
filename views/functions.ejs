@@ -1,0 +1,9 @@
+<%
+getTheExcerpt = function(wholeText){
+    var strLen = wholeText.length;
+    if(strLen < 100){
+        return wholeText.substring(0, strLen);
+    }
+    return wholeText.substring(0, 100);
+}
+%>
