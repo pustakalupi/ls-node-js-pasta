@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Lusfikar Sheba",
+  "author": "Anonim",
   "license": "UNLICENSED",
   "dependencies": {
     "body-parser": "^1.17.2",
