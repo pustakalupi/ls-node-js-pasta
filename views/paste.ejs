@@ -1,206 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title><%= therows[0].title %> - Node.js Pasta</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Share <%= therows[0].title %> with Node.js Pasta">
-        <meta name="author" content="Lusfikar Sheba">
+    <title><%= therows[0].title %> - Node.js Pasta</title>
 
-        <!-- [ Social Media meta tag ] -->
-        <meta content='summary' name='twitter:card'/>
-        <meta content='@ciyy_space' name='twitter:site'/>
-        <meta content='@ciyy_space' name='twitter:creator'/>
+    <meta name="description" content="Share <%= therows[0].title %> with Node.js Pasta">
+    <meta name="author" content="Anonim">
 
-        <meta content='<%=hostname%>/paste/<%=therows[0].pasteperm %>' property='og:url'/>
-        <meta content='<%= therows[0].title %> - Node.js Pasta' property='og:site_name'/>
-        <meta content='<%= therows[0].title %> - Node.js Pasta' property='og:title'/>
-        <meta content='<%= therows[0].title %> - Node.js Pasta' name='twitter:title'/>
-        <meta content='article' property='og:type'/>
-        <meta content='<%=hostname%>/views/img/ciyy-200x200.png' property='og:image'/>
-        <meta content='<%=hostname%>/views/img/ciyy-200x200.png' name='twitter:image'/>
-        <meta content='Share <%= therows[0].title %> with Node.js Pasta' property='og:description'/>
-        <meta content='Share <%= therows[0].title %> with Node.js Pasta' name='twitter:description'/>
-        <meta content='en_US' property='og:locale'/>
-        <!-- [/ Social Media meta tag ] -->
+    <!-- [ Social Media meta tag ] -->
+    <meta content='summary' name='twitter:card' />
+    <meta content='@ciyy_space' name='twitter:site' />
+    <meta content='@ciyy_space' name='twitter:creator' />
 
-        <link rel="shortcut icon" type="image/png" href="/views/img/favicon.png"/>
+    <meta content='<%=hostname%>/paste/<%=therows[0].pasteperm %>' property='og:url' />
+    <meta content='<%= therows[0].title %> - Node.js Pasta' property='og:site_name' />
+    <meta content='<%= therows[0].title %> - Node.js Pasta' property='og:title' />
+    <meta content='<%= therows[0].title %> - Node.js Pasta' name='twitter:title' />
+    <meta content='article' property='og:type' />
+    <meta content='<%=hostname%>/views/img/ciyy-200x200.png' property='og:image' />
+    <meta content='<%=hostname%>/views/img/ciyy-200x200.png' name='twitter:image' />
+    <meta content='Share <%= therows[0].title %> with Node.js Pasta' property='og:description' />
+    <meta content='Share <%= therows[0].title %> with Node.js Pasta' name='twitter:description' />
+    <meta content='en_US' property='og:locale' />
+    <!-- [/ Social Media meta tag ] -->
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/views/img/favicon.png" />
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
-        <!--
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <!--
         <link href="/views/css/bootstrap.min.css" rel="stylesheet">
         <link href="/views/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="/views/css/font-awesome.min.css" rel="stylesheet">
         <script src="/views/js/jquery-3.2.1.min.js"></script>
         <script src="/views/js/bootstrap.min.js"></script>
         -->
-        
-        <style type="text/css" media="screen">
-            #editor { 
-                position: relative;
-                height: 300px;
-            }
-        </style>
-    </head>
+
+    <style type="text/css" media="screen">
+        #editor {
+            position: relative;
+            height: 300px;
+        }
+    </style>
+</head>
+
 <body>
 
-<div class="container">
-    <nav class="navbar navbar-default navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Node.js Pasta</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/trends">Trends</a></li>
-                    <li><div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="/"><span class="glyphicon glyphicon-plus-sign"></span> New Paste</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="row">
-        <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><b>This Paste</b></h3>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Node.js Pasta</a>
                 </div>
-                <div class="panel-body">
-                    <div id="editor">
-                        <%= therows[0].newpaste %>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/trends">Trends</a></li>
+                        <li>
+                            <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="/"><span
+                                        class="glyphicon glyphicon-plus-sign"></span> New Paste</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><b>This Paste</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="editor">
+                            <%= therows[0].newpaste %>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><b>Links for This Paste</b></h3>
-                </div>
-                <div class="panel-body">
-                    <label for="pc-tx-pasteurl">Paste URL:</label>
-                    <div id="pc-tx-pasteurl" class="input-group">
-                        <input id="pc-in-tx-pasteurl" type="text" class="form-control" value="<%=hostname%>/paste/<%=therows[0].pasteperm %>">
-                        <span class="input-group-btn">
-                            <button id="pc-btn-copy-pasteurl" class="btn btn-default" type="button">Copy!</button>
-                        </span>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><b>Links for This Paste</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <label for="pc-tx-pasteurl">Paste URL:</label>
+                        <div id="pc-tx-pasteurl" class="input-group">
+                            <input id="pc-in-tx-pasteurl" type="text" class="form-control"
+                                value="<%=hostname%>/paste/<%=therows[0].pasteperm %>">
+                            <span class="input-group-btn">
+                                <button id="pc-btn-copy-pasteurl" class="btn btn-default" type="button"
+                                    data-clipboard-target="#pc-in-tx-pasteurl">Copy!</button>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><b>Share</b></h3>
-                </div>
-                <div class="panel-body">
-                    <div style="text-align: center">
-                        <a href="http://www.facebook.com/share.php?u=<%=hostname%>/paste/<%=therows[0].pasteperm %>&t=<%=therows[0].title %>" class="fa fa-facebook fa-5x" target="_blank"></a>
-                        <a href="http://twitter.com/share?original_referer=<%=hostname%>/paste/<%=therows[0].pasteperm %>&source=web&text=<%=therows[0].title %>" class="fa fa-twitter fa-5x" target="_blank"></a>
-                        <a href="https://plus.google.com/share?url=<%=hostname%>/paste/<%=therows[0].pasteperm %>" class="fa fa-google fa-5x" target="_blank"></a>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><b>Share</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div style="text-align: center">
+                            <a href="http://www.facebook.com/share.php?u=<%=hostname%>/paste/<%=therows[0].pasteperm %>&t=<%=therows[0].title %>"
+                                class="fa fa-facebook fa-5x" target="_blank"></a>
+                            <a href="http://twitter.com/share?original_referer=<%=hostname%>/paste/<%=therows[0].pasteperm %>&source=web&text=<%=therows[0].title %>"
+                                class="fa fa-twitter fa-5x" target="_blank"></a>
+                            <a href="https://plus.google.com/share?url=<%=hostname%>/paste/<%=therows[0].pasteperm %>"
+                                class="fa fa-google fa-5x" target="_blank"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <nav class="navbar navbar-default navbar-inverse">
-        <div class="container-fluid">
-            <p class="navbar-text pull-right">Copyright &#169; Lusfikar Sheba 2017</p>
-        </div>
-    </nav>
+        <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <p class="navbar-text pull-right">Copyright &#169; Anonim 2017</p>
+            </div>
+        </nav>
 
-    <script src="/views/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/github");
-        editor.getSession().setMode("ace/mode/<%=therows[0].syntaxhi %>");
-        editor.setReadOnly(true);
-    </script>
-    <script>
-        document.getElementById("pc-btn-copy-pasteurl").addEventListener("click", function() {
-            var succ = copyToClipboard(document.getElementById("pc-in-tx-pasteurl"));
-            if(succ == true){
-                alert("URL has been copied to clipboard");
-            }
-        });
-
-        function copyToClipboard(elem) {
-                // create hidden text element, if it doesn't already exist
-            var targetId = "_hiddenCopyText_";
-            var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
-            var origSelectionStart, origSelectionEnd;
-            if (isInput) {
-                // can just use the original source element for the selection and copy
-                target = elem;
-                origSelectionStart = elem.selectionStart;
-                origSelectionEnd = elem.selectionEnd;
-            } else {
-                // must use a temporary form element for the selection and copy
-                target = document.getElementById(targetId);
-                if (!target) {
-                    var target = document.createElement("textarea");
-                    target.style.position = "absolute";
-                    target.style.left = "-9999px";
-                    target.style.top = "0";
-                    target.id = targetId;
-                    document.body.appendChild(target);
-                }
-                target.textContent = elem.textContent;
-            }
-            // select the content
-            var currentFocus = document.activeElement;
-            target.focus();
-            target.setSelectionRange(0, target.value.length);
-            
-            // copy the selection
-            var succeed;
-            try {
-                    succeed = document.execCommand("copy");
-            } catch(e) {
-                succeed = false;
-            }
-            // restore original focus
-            if (currentFocus && typeof currentFocus.focus === "function") {
-                currentFocus.focus();
-            }
-            
-            if (isInput) {
-                // restore prior selection
-                elem.setSelectionRange(origSelectionStart, origSelectionEnd);
-            } else {
-                // clear temporary content
-                target.textContent = "";
-            }
-            return succeed;
-        }
-    </script>
+        <script src="/views/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/github");
+            editor.getSession().setMode("ace/mode/<%=therows[0].syntaxhi %>");
+            editor.setReadOnly(true);
+        </script>
+        <script>
+            new ClipboardJS('#pc-btn-copy-pasteurl');
+        </script>
 </body>
+
 </html>
