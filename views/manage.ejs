@@ -1,102 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Manage <%= therows[0].title %> - Node.js Pasta</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Manage <%= therows[0].title %> with Node.js Pasta">
-        <meta name="author" content="Lusfikar Sheba">
+    <title>Manage <%= therows[0].title %> - Node.js Pasta</title>
 
-        <!-- [ Social Media meta tag ] -->
-        <meta content='summary' name='twitter:card'/>
-        <meta content='@ciyy_space' name='twitter:site'/>
-        <meta content='@ciyy_space' name='twitter:creator'/>
+    <meta name="description" content="Manage <%= therows[0].title %> with Node.js Pasta">
+    <meta name="author" content="Anonim">
 
-        <meta content='<%=hostname%>/manage/<%=therows[0].pastemanagerperm %>' property='og:url'/>
-        <meta content='Manage <%= therows[0].title %> - Node.js Pasta' property='og:site_name'/>
-        <meta content='Manage <%= therows[0].title %> - Node.js Pasta' property='og:title'/>
-        <meta content='Manage <%= therows[0].title %> - Node.js Pasta' name='twitter:title'/>
-        <meta content='article' property='og:type'/>
-        <meta content='<%=hostname%>/views/img/ciyy-200x200.png' property='og:image'/>
-        <meta content='<%=hostname%>/views/img/ciyy-200x200.png' name='twitter:image'/>
-        <meta content='Manage <%= therows[0].title %> with Node.js Pasta' property='og:description'/>
-        <meta content='Manage <%= therows[0].title %> with Node.js Pasta' name='twitter:description'/>
-        <meta content='en_US' property='og:locale'/>
-        <!-- [/ Social Media meta tag ] -->
+    <!-- [ Social Media meta tag ] -->
+    <meta content='summary' name='twitter:card' />
+    <meta content='@ciyy_space' name='twitter:site' />
+    <meta content='@ciyy_space' name='twitter:creator' />
 
-        <link rel="shortcut icon" type="image/png" href="/views/img/favicon.png"/>
+    <meta content='<%=hostname%>/manage/<%=therows[0].pastemanagerperm %>' property='og:url' />
+    <meta content='Manage <%= therows[0].title %> - Node.js Pasta' property='og:site_name' />
+    <meta content='Manage <%= therows[0].title %> - Node.js Pasta' property='og:title' />
+    <meta content='Manage <%= therows[0].title %> - Node.js Pasta' name='twitter:title' />
+    <meta content='article' property='og:type' />
+    <meta content='<%=hostname%>/views/img/ciyy-200x200.png' property='og:image' />
+    <meta content='<%=hostname%>/views/img/ciyy-200x200.png' name='twitter:image' />
+    <meta content='Manage <%= therows[0].title %> with Node.js Pasta' property='og:description' />
+    <meta content='Manage <%= therows[0].title %> with Node.js Pasta' name='twitter:description' />
+    <meta content='en_US' property='og:locale' />
+    <!-- [/ Social Media meta tag ] -->
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/views/img/favicon.png" />
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
-        <!--
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <!--
         <link href="/views/css/bootstrap.min.css" rel="stylesheet">
         <link href="/views/css/bootstrap-theme.min.css" rel="stylesheet">
         <script src="/views/js/jquery-3.2.1.min.js"></script>
         <script src="/views/js/bootstrap.min.js"></script>
         -->
-    </head>
+</head>
+
 <body>
 
-<div class="container">
-    <nav class="navbar navbar-default navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Node.js Pasta</a>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Node.js Pasta</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/trends">Trends</a></li>
+                        <li>
+                            <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="/"><span
+                                        class="glyphicon glyphicon-plus-sign"></span> New Paste</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/trends">Trends</a></li>
-                    <li><div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="/"><span class="glyphicon glyphicon-plus-sign"></span> New Paste</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
 
-    <form method="post">
-        <div class="row">
-            <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><b>This Paste</b></h3>
-                    </div>
-                    <div class="panel-body">
-                        <textarea id="pc-ta-newpaste" name="pcTaNewpaste" class="form-control" rows="10">
+        <form method="post">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><b>This Paste</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <textarea id="pc-ta-newpaste" name="pcTaNewpaste" class="form-control" rows="10">
                             <%= therows[0].newpaste %>
                         </textarea>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class= "col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><b>Settings</b></h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="form-group">
-                            <label for="pc-sl-syntaxhi">Syntax Highlighting:</label>
-                            <select id="pc-sl-syntaxhi" name="pcSlSyntaxhi" class="form-control">
-                                <%
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><b>Settings</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="pc-sl-syntaxhi">Syntax Highlighting:</label>
+                                <select id="pc-sl-syntaxhi" name="pcSlSyntaxhi" class="form-control">
+                                    <%
                                 var options = [ "text", "html", "css", "javascript" ];
                                 for ( var i = 0; i < options.length; i++ )
                                 {
@@ -104,11 +116,11 @@
                                     %><option value="<%=options[i] %>" <%=selected %>><%=options[i] %></option><%
                                 }
                                 %>
-                            </select> 
-                              
-                            <label for="pc-sl-pasteex">Paste Expiration:</label>
-                            <select id="pc-sl-pasteex" name="pcSlPasteex" class="form-control">
-                                <%
+                                </select>
+
+                                <label for="pc-sl-pasteex">Paste Expiration:</label>
+                                <select id="pc-sl-pasteex" name="pcSlPasteex" class="form-control">
+                                    <%
                                 var options = [ "1 Day", "12 Hours", "3 Hours", "30 Minutes", "2 Minutes"];
                                 for ( var i = 0; i < options.length; i++ )
                                 {
@@ -116,11 +128,11 @@
                                     %><option value="<%=options[i] %>" <%=selected %>><%=options[i] %></option><%
                                 }
                                 %>
-                            </select>
+                                </select>
 
-                            <label for="pc-sl-pasteexpos">Paste Exposure:</label>
-                            <select id="pc-sl-pasteexpos" name="pcSlPasteexpos" class="form-control">
-                                <%
+                                <label for="pc-sl-pasteexpos">Paste Exposure:</label>
+                                <select id="pc-sl-pasteexpos" name="pcSlPasteexpos" class="form-control">
+                                    <%
                                 var options = [ "Public", "Unlisted" ];
                                 for ( var i = 0; i < options.length; i++ )
                                 {
@@ -128,113 +140,61 @@
                                     %><option value="<%=options[i] %>" <%=selected %>><%=options[i] %></option><%
                                 }
                                 %>
-                            </select>
+                                </select>
 
-                            <label for="pc-tx-title">Title:</label>
-                            <input id="pc-tx-title" type="text" name="pcTxTitle" class="form-control" value="<%= therows[0].title %>">
-                            <br/>
-                            <input formaction="/manage/save-paste/<%=therows[0].pastemanagerperm %>" id="pc-sb-savepaste" name="pcSbSavepaste" class="btn btn-danger btn-block" type="submit" value="Save Paste" />
-                            <input formaction="/manage/delete-paste/<%=therows[0].pastemanagerperm %>" id="pc-sb-delpaste" name="pcSbDelpaste" class="btn btn-danger btn-block" type="submit" value="Delete Paste" />
+                                <label for="pc-tx-title">Title:</label>
+                                <input id="pc-tx-title" type="text" name="pcTxTitle" class="form-control"
+                                    value="<%= therows[0].title %>">
+                                <br />
+                                <input formaction="/manage/save-paste/<%=therows[0].pastemanagerperm %>"
+                                    id="pc-sb-savepaste" name="pcSbSavepaste" class="btn btn-danger btn-block"
+                                    type="submit" value="Save Paste" />
+                                <input formaction="/manage/delete-paste/<%=therows[0].pastemanagerperm %>"
+                                    id="pc-sb-delpaste" name="pcSbDelpaste" class="btn btn-danger btn-block"
+                                    type="submit" value="Delete Paste" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><b>Links for This Paste</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <label for="pc-tx-managerurl">Manager URL:</label>
+                            <div id="pc-tx-managerurl" class="input-group">
+                                <input id="pc-in-tx-managerurl" type="text" class="form-control"
+                                    value="<%=hostname%>/manage/<%=therows[0].pastemanagerperm %>">
+                                <span class="input-group-btn">
+                                    <button id="pc-btn-copy-managerurl" class="btn btn-default btn-copy" type="button"
+                                        data-clipboard-target="#pc-in-tx-managerurl">Copy!</button>
+                                </span>
+                            </div>
+
+                            <label for="pc-tx-pasteurl">Paste URL:</label>
+                            <div id="pc-tx-pasteurl" class="input-group">
+                                <input id="pc-in-tx-pasteurl" type="text" class="form-control"
+                                    value="<%=hostname%>/paste/<%=therows[0].pasteperm %>">
+                                <span class="input-group-btn">
+                                    <button id="pc-btn-copy-pasteurl" class="btn btn-default btn-copy" type="button"
+                                        data-clipboard-target="#pc-in-tx-pasteurl">Copy!</button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class= "col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><b>Links for This Paste</b></h3>
-                    </div>
-                    <div class="panel-body">
-                        <label for="pc-tx-managerurl">Manager URL:</label>
-                        <div id="pc-tx-managerurl" class="input-group">
-                            <input id="pc-in-tx-managerurl" type="text" class="form-control" value="<%=hostname%>/manage/<%=therows[0].pastemanagerperm %>">
-                            <span class="input-group-btn">
-                                <button id="pc-btn-copy-managerurl" class="btn btn-default" type="button">Copy!</button>
-                            </span>
-                        </div>
-
-                        <label for="pc-tx-pasteurl">Paste URL:</label>
-                        <div id="pc-tx-pasteurl" class="input-group">
-                            <input id="pc-in-tx-pasteurl" type="text" class="form-control" value="<%=hostname%>/paste/<%=therows[0].pasteperm %>">
-                            <span class="input-group-btn">
-                                <button id="pc-btn-copy-pasteurl" class="btn btn-default" type="button">Copy!</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+        </form>
+        <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <p class="navbar-text pull-right">Copyright &#169; Anonim 2017</p>
             </div>
-        </div>
-    </form>
-    <nav class="navbar navbar-default navbar-inverse">
-        <div class="container-fluid">
-            <p class="navbar-text pull-right">Copyright &#169; Lusfikar Sheba 2017</p>
-        </div>
-    </nav>
-    <script>
-        document.getElementById("pc-btn-copy-managerurl").addEventListener("click", function() {
-            var succ = copyToClipboard(document.getElementById("pc-in-tx-managerurl"));
-            if(succ == true){
-                alert("URL has been copied to clipboard");
-            }
-        });
-
-        document.getElementById("pc-btn-copy-pasteurl").addEventListener("click", function() {
-            var succ = copyToClipboard(document.getElementById("pc-in-tx-pasteurl"));
-            if(succ == true){
-                alert("URL has been copied to clipboard");
-            }
-        });
-        
-        function copyToClipboard(elem) {
-              // create hidden text element, if it doesn't already exist
-            var targetId = "_hiddenCopyText_";
-            var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
-            var origSelectionStart, origSelectionEnd;
-            if (isInput) {
-                // can just use the original source element for the selection and copy
-                target = elem;
-                origSelectionStart = elem.selectionStart;
-                origSelectionEnd = elem.selectionEnd;
-            } else {
-                // must use a temporary form element for the selection and copy
-                target = document.getElementById(targetId);
-                if (!target) {
-                    var target = document.createElement("textarea");
-                    target.style.position = "absolute";
-                    target.style.left = "-9999px";
-                    target.style.top = "0";
-                    target.id = targetId;
-                    document.body.appendChild(target);
-                }
-                target.textContent = elem.textContent;
-            }
-            // select the content
-            var currentFocus = document.activeElement;
-            target.focus();
-            target.setSelectionRange(0, target.value.length);
-            
-            // copy the selection
-            var succeed;
-            try {
-                  succeed = document.execCommand("copy");
-            } catch(e) {
-                succeed = false;
-            }
-            // restore original focus
-            if (currentFocus && typeof currentFocus.focus === "function") {
-                currentFocus.focus();
-            }
-            
-            if (isInput) {
-                // restore prior selection
-                elem.setSelectionRange(origSelectionStart, origSelectionEnd);
-            } else {
-                // clear temporary content
-                target.textContent = "";
-            }
-            return succeed;
-        }
-    </script>
+        </nav>
+        <script>
+            new ClipboardJS('.btn-copy');
+        </script>
 </body>
+
 </html>
